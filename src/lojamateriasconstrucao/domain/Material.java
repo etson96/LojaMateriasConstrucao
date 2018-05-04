@@ -12,6 +12,7 @@ public class Material {
     private String cor;
     private Date dataFabricacao;
     private String unidadeMedida;
+    private float preco;
 
     public int getIdMaterial() {
         return idMaterial;
@@ -68,6 +69,16 @@ public class Material {
     public void setUnidadeMedida(String unidadeMedida) {
         this.unidadeMedida = unidadeMedida;
     }
+
+    public float getPreco() {
+        return preco;
+    }
+
+    public void setPreco(float preco) {
+        this.preco = preco;
+    }
+    
+    
     
     
 }

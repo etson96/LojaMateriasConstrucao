@@ -3,6 +3,7 @@ package lojamateriasconstrucao;
 
 import java.util.Scanner;
 import lojamateriasconstrucao.view.ClienteView;
+import lojamateriasconstrucao.view.MaterialView;
 
 
 public class LojaMateriasConstrucao {
@@ -26,11 +27,18 @@ public class LojaMateriasConstrucao {
                 c1.clienteMenu();
                 break;
             }
+            
+            case 2:{
+                MaterialView c2= new MaterialView();
+                c2.menuMaterial();
+                break;
+            }
         }
     }
     
     public static void menuPrincipal(){
         System.out.println("1 - Clientes");
+        System.out.println("2 - Material");
     }
     
 }
