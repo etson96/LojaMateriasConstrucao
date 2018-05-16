@@ -17,8 +17,9 @@ public class LojaMateriasConstrucao {
         System.out.println("---------------------------------------------------------");
         
         
-        System.out.println("\nEscolha uma opção");
+        
         menuPrincipal();
+        System.out.println("\nEscolha uma opção");
         op = ler.nextInt();
         
         switch(op){

@@ -1,13 +1,21 @@
 
 package lojamateriasconstrucao.view;
 
+import java.util.Date;
+import java.util.List;
 import java.util.Scanner;
 import lojamateriasconstrucao.domain.Cliente;
+import lojamateriasconstrucao.domain.Endereco;
 
 
 public class ClienteView {
     
-    Scanner ler = new Scanner(System.in);
+    private static final Scanner ler = new Scanner(System.in);
+    private static String nome, naturalidade, email, nomePai, nomeMae;
+    private static Date dataNascimento;
+    private static int BI, NIF, telefone;    
+    private static List<Endereco> endereco;
+    
     
     public void clienteMenu(){        
         int op;
@@ -24,11 +32,25 @@ public class ClienteView {
     }
     
     public Cliente adicionar(){
-        Cliente cliente = new Cliente();
-        String nome;
-        System.out.println("Entre com o nome: ");
+        Cliente cliente = new Cliente(); 
+        ler.nextLine();
+                
+        System.out.println("Entre com o nome completo: ");
         nome = ler.nextLine();
         cliente.setNome(nome);
+        
+        //System.out.println("Entre com data de nascimento: ");
+        //dataNascimento = ler.nextLine();
+        
+        System.out.println("Entre com a naturalidade: ");
+        naturalidade = ler.nextLine();
+        cliente.setNaturalidade(naturalidade);
+        
+        System.out.println("Entre com o email: ");
+        email = ler.nextLine();
+        cliente.setEmail(email);
+        
+        
         return cliente;
     }
 }
